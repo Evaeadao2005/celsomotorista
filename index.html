@@ -80,7 +80,39 @@
             align-items: center;
             margin-top: 20px;
         }
-        .whatsapp-button, .facebook-button, .instagram-button {
+        
+        /* Botão do WhatsApp em verde com destaque */
+        .whatsapp-button {
+            background-color: #25d366; /* Verde WhatsApp */
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 10px 0; /* Espaçamento entre botões */
+            animation: pulse 1.5s infinite;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #1ebe5d; /* Verde mais escuro */
+            transform: translateY(-2px);
+        }
+
+        /* Efeito de pulsação para o botão do WhatsApp */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Outros Botões */
+        .facebook-button, .instagram-button {
             background-color: #ff7f50; /* Laranja */
             color: #fff;
             padding: 15px 25px;
@@ -92,10 +124,13 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             margin: 10px 0; /* Espaçamento entre botões */
         }
-        .whatsapp-button:hover, .facebook-button:hover, .instagram-button:hover {
+        
+        .facebook-button:hover, .instagram-button:hover {
             background-color: #e67e22; /* Laranja mais escuro */
             transform: translateY(-2px);
         }
+
+        /* Ícones */
         .whatsapp-icon, .facebook-icon, .instagram-icon {
             margin-right: 10px;
         }
@@ -135,10 +170,9 @@
         <h2>Serviços de Transporte</h2>
         <p>Oferecemos serviços de motorista de Iguatu para todo o Brasil com segurança e conforto.</p>
 
-      </div>
         <div class="button-container">
             <a href="https://wa.me/558892751332?text=Olá, vim pelo @victordalmon." target="_blank" class="whatsapp-button">
-                <i class="fab fa-whatsapp whatsapp-icon"></i> Fale Conosco
+                <i class="fab fa-whatsapp whatsapp-icon"></i> Fale Comigo
             </a>
             <a href="https://www.facebook.com/celso.motorista" target="_blank" class="facebook-button">
                 <i class="fab fa-facebook facebook-icon"></i> Facebook
@@ -152,7 +186,7 @@
                 <source src="/celsovideo.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
-  
+        </div>
     </section>
 
     <footer>
