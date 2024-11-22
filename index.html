@@ -3,207 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Serviços de transporte em Iguatu e viagens para todo o Brasil. Motorista particular com conforto, segurança e confiabilidade.">
-    <meta name="keywords" content="táxi em Iguatu, motorista particular Iguatu, viagens Iguatu, transporte em Iguatu, Celso Motorista, dktop, rap10, uber em Iguatu">
+    <meta name="description" content="Celso Motorista oferece transporte em Iguatu com segurança, conforto e confiabilidade. Viagens curtas ou longas para qualquer destino no Brasil.">
+    <meta name="keywords" content="transporte Iguatu, táxi Iguatu, viagens Iguatu, motorista particular, Celso Motorista">
     <meta name="author" content="Celso Motorista">
-    <title>Táxi e Transporte em Iguatu - Celso Motorista</title>
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Celso Motorista - Táxi e Transporte em Iguatu">
+    <meta property="og:description" content="Viagens seguras e confortáveis com Celso Motorista. Iguatu e todo o Brasil.">
+    <meta property="og:image" content="/logocelso.png">
+    <meta property="og:url" content="https://www.celsomotorista.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Celso Motorista - Táxi e Transporte em Iguatu">
+    <meta name="twitter:description" content="Viagens seguras e confortáveis. Transporte confiável em Iguatu.">
+    <meta name="twitter:image" content="/logocelso.png">
+    <title>Táxi e Transporte Iguatu - Celso Motorista</title>
     <link rel="icon" href="/favicon.png" type="image/png">
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-      /* Reset de margens e preenchimentos */
+        /* Global */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
         }
-
         body {
-            background-color: #f8f9fa; /* Fundo claro */
+            background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Cabeçalho */
+        /* Header */
         header {
-            background-color: #ff7f50; /* Laranja */
-            color: #fff;
-            padding: 20px;
+            background-color: #ff7f50;
+            color: white;
+            padding: 15px;
             text-align: center;
         }
         header img {
-            max-width: 200px; /* Logo retangular */
+            max-width: 150px;
+            margin-bottom: 10px;
         }
         header h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
+            font-size: 2em;
+        }
+        header p {
+            font-size: 1.2em;
         }
 
-        /* Seção Principal */
+        /* Main Section */
         .main-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #ffffff;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px 15px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .main-section h2 {
-            color: #ff7f50; /* Laranja */
-            font-size: 2em;
-            margin-bottom: 20px;
+            color: #ff7f50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
         }
-        .main-section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 30px;
+        .main-section .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-
-        /* Vídeo */
-        .video-container {
-            max-width: 1000px;
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        .feature-item {
+            flex: 1 1 calc(50% - 20px);
+            text-align: center;
+            padding: 10px;
         }
-        .video-container video {
-            width: 100%;
-            height: auto;
+        .feature-item p {
+            margin-top: 10px;
         }
 
-        /* Botões */
+        /* Buttons */
         .button-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
             margin-top: 20px;
+            gap: 10px;
         }
-        
-        /* Botão do WhatsApp em verde com destaque */
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
         .whatsapp-button {
-            background-color: #25d366; /* Verde WhatsApp */
-            color: #fff;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            margin: 10px 0; /* Espaçamento entre botões */
-            animation: pulse 1.5s infinite;
+            background-color: #25d366;
         }
-        
         .whatsapp-button:hover {
-            background-color: #1ebe5d; /* Verde mais escuro */
-            transform: translateY(-2px);
+            background-color: #1ebe5d;
+            transform: scale(1.05);
         }
 
-        /* Efeito de pulsação para o botão do WhatsApp */
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        /* Outros Botões */
-        .facebook-button, .instagram-button {
-            background-color: #ff7f50; /* Laranja */
-            color: #fff;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            margin: 10px 0; /* Espaçamento entre botões */
-        }
-        
-        .facebook-button:hover, .instagram-button:hover {
-            background-color: #e67e22; /* Laranja mais escuro */
-            transform: translateY(-2px);
-        }
-
-        /* Ícones */
-        .whatsapp-icon, .facebook-icon, .instagram-icon {
-            margin-right: 10px;
-        }
-
-        /* Rodapé */
+        /* Footer */
         footer {
             background-color: #333;
-            color: #fff;
+            color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        
-        /* Responsividade */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            .main-section h2 {
-                font-size: 1.8em;
-            }
-            .whatsapp-button, .facebook-button, .instagram-button {
-                font-size: 1em;
-                padding: 10px 15px;
-            }
+            padding: 15px;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <img src="/logocelso.png" alt="Logo de Celso Motorista - Táxi e Transporte em Iguatu">
+        <img src="/logocelso.png" alt="Logo de Celso Motorista">
         <h1>Táxi e Transporte em Iguatu</h1>
-        <p>Viagens para qualquer destino com conforto e segurança</p>
+        <p>Viagens seguras e confortáveis, onde você precisar.</p>
     </header>
 
     <section class="main-section">
-        <h2>Serviços de Transporte em Iguatu</h2>
-        <p>Seja para viagens curtas, longas ou serviços locais, o <strong>Celso Motorista</strong> está aqui para atender você com pontualidade e excelência.</p>
-        <ul>
-            <li>Táxi em Iguatu</li>
-            <li>Viagens de Iguatu para qualquer cidade</li>
-            <li>Motorista particular para eventos e compromissos</li>
-            <li>Conforto e segurança garantidos</li>
-        </ul>
-        
-        <div class="button-container">
-            <a href="https://wa.me/558892751332?text=Olá, gostaria de agendar uma viagem." target="_blank" class="whatsapp-button">
-                <i class="fab fa-whatsapp whatsapp-icon"></i> Agende pelo WhatsApp
-            </a>
+        <h2>Por que escolher Celso Motorista?</h2>
+        <div class="features">
+            <div class="feature-item">
+                <i class="fas fa-car fa-3x" style="color: #ff7f50;"></i>
+                <p>Conforto e segurança em todas as viagens.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-route fa-3x" style="color: #ff7f50;"></i>
+                <p>Viagens para qualquer cidade do Brasil.</p>
+            </div>
         </div>
-        
-        <div class="video-container">
-            <video controls>
-                <source src="/celsovideo.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
+        <div class="button-container">
+            <a href="https://wa.me/558892751332?text=Olá, gostaria de agendar uma viagem." class="button whatsapp-button">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Celso Motorista - Transporte em Iguatu</p>
+        <p>&copy; 2024 Celso Motorista. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-XXXXX-Y');
-    </script>
 </body>
 </html>
