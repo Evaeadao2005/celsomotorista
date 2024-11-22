@@ -9,35 +9,160 @@
     <title>Táxi e Transporte em Iguatu - Celso Motorista</title>
     <link rel="icon" href="/favicon.png" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
+  <style>
+    /* Reset e configurações gerais */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
     body {
         background-color: #f8f9fa;
         color: #333;
-        text-align: center; /* Centraliza o texto por padrão */
+        text-align: center; /* Centraliza por padrão */
+    }
+
+    /* Cabeçalho */
+    header {
+        background-color: #ff7f50;
+        color: #fff;
+        padding: 20px;
     }
 
     header img {
-        display: block; /* Torna a imagem centralizável */
+        display: block; /* Centraliza imagem */
         margin: 0 auto;
+        max-width: 150px;
     }
 
-    .main-section, .why-choose, .video-container {
-        text-align: center; /* Garante centralização do conteúdo */
-        margin: 20px auto; /* Centraliza horizontalmente */
-        max-width: 800px; /* Define limite de largura */
+    header h1 {
+        font-size: 2.2em;
+        margin: 10px 0;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    /* Sessão principal */
+    .main-section {
+        background-color: #ffffff;
+        margin: 20px auto;
+        padding: 30px 20px;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-section h2 {
+        color: #ff7f50;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .main-section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .main-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .main-section ul li {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .button-container {
+        text-align: center; /* Garante centralização do botão */
+        margin-top: 20px;
+    }
+
+    .whatsapp-button {
+        background-color: #25d366;
+        color: #fff;
+        padding: 15px 25px;
+        border-radius: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        animation: float 1.5s infinite;
+        position: relative;
+    }
+
+    .whatsapp-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .whatsapp-icon {
+        margin-right: 10px;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    /* Por que escolher */
+    .why-choose {
+        background-color: #ff7f50;
+        color: #fff;
+        padding: 40px 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .why-choose h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
     }
 
     .why-choose ul {
         display: inline-block; /* Centraliza os itens da lista */
-        text-align: left; /* Se desejar alinhamento à esquerda */
+        text-align: left; /* Alinha os itens à esquerda */
+        padding: 0;
     }
 
-    .button-container {
-        text-align: center; /* Centraliza o botão */
+    .why-choose ul li {
+        font-size: 1.1em;
+        margin-bottom: 15px;
     }
 
+    /* Vídeo */
+    .video-container {
+        margin: 30px auto;
+        max-width: 800px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #000;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+
+    /* Rodapé */
     footer {
-        text-align: center; /* Garante centralização do rodapé */
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
     }
 </style>
 </head>
