@@ -77,10 +77,13 @@
             color: #fff;
             text-align: center;
             padding: 30px 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         header img {
-            max-width: 120px;
+            max-width: 100%;
+            height: auto;
             margin: 0 auto 15px;
         }
 
@@ -95,12 +98,14 @@
 
         .main-section {
             background: #fff;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 100%;
+            margin: 20px 0;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .main-section h2 {
@@ -155,6 +160,8 @@
             color: #fff;
             text-align: center;
             padding: 20px 10px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         /* Responsividade para dispositivos móveis */
@@ -180,7 +187,7 @@
 
         @media (max-width: 480px) {
             header img {
-                max-width: 100px;
+                max-width: 90%;
             }
 
             header h1 {
@@ -190,6 +197,8 @@
             .cta-button {
                 font-size: 1.2em;
                 padding: 14px 28px;
+                width: 90%; /* Botão mais largo */
+                margin: 20px auto;
             }
 
             .main-section h2 {
@@ -228,8 +237,7 @@
     </main>
 
     <footer>
-        <p>© 2024 Celso Motorista. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Celso Motorista - Todos os direitos reservados</p>
     </footer>
-
 </body>
 </html>
