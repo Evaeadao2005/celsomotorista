@@ -86,25 +86,25 @@
         }
 
         header img {
-            max-width: 20%; /* Logo maior em computadores */
+            max-width: 35%; /* Aumenta o logo em dispositivos móveis */
             height: auto;
             margin: 0 auto 15px;
         }
 
         header h1 {
-            font-size: 1.8em;
+            font-size: 2em;
             margin: 10px 0;
         }
 
         header p {
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
 
         .main-section {
             background: #fff;
             max-width: 100%;
             margin: 20px 0;
-            padding: 20px;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -115,7 +115,7 @@
 
         .main-section h2 {
             color: #ff7f50;
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 20px;
         }
 
@@ -125,8 +125,8 @@
         }
 
         .main-section ul li {
-            font-size: 1.2em;
-            margin: 12px 0;
+            font-size: 1.3em;
+            margin: 20px 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -141,14 +141,16 @@
         .cta-button {
             display: inline-block;
             margin: 30px 0;
-            padding: 16px 30px;
-            font-size: 1.3em;
+            padding: 20px 40px;
+            font-size: 1.5em;
             font-weight: bold;
             color: #fff;
             background-color: #25D366; /* Cor do WhatsApp */
             border-radius: 8px;
             text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 90%; /* Botão mais largo em dispositivos móveis */
+            margin-left: 5%;
         }
 
         .cta-button:hover {
@@ -172,47 +174,47 @@
         /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
             header img {
-                max-width: 15%; /* Logo discreta para tablets */
+                max-width: 40%; /* Logo maior em tablets */
             }
 
             .main-section {
-                padding: 20px;
+                padding: 30px;
             }
 
             .cta-button {
-                font-size: 1.3em;
-                padding: 16px 30px;
+                font-size: 1.4em;
+                padding: 20px 40px;
             }
 
             .main-section ul li {
-                font-size: 1.1em;
-                margin: 12px 0;
+                font-size: 1.2em;
+                margin: 15px 0;
             }
         }
 
         @media (max-width: 480px) {
             header img {
-                max-width: 25%; /* Logo discreta em smartphones */
+                max-width: 50%; /* Logo maior em smartphones */
             }
 
             header h1 {
-                font-size: 1.5em;
+                font-size: 1.8em;
             }
 
             .cta-button {
-                font-size: 1.2em;
-                padding: 14px 28px;
+                font-size: 1.4em;
+                padding: 20px 40px;
                 width: 90%; /* Botão mais largo */
-                margin: 20px auto;
+                margin: 30px auto;
             }
 
             .main-section h2 {
-                font-size: 1.6em;
+                font-size: 1.8em;
             }
 
             .main-section ul li {
-                font-size: 1em;
-                margin: 10px 0;
+                font-size: 1.2em;
+                margin: 12px 0;
             }
         }
     </style>
@@ -227,21 +229,20 @@
 
     <main>
         <section class="main-section">
-            <h2>Por Que Escolher Celso Motorista?</h2>
+            <h2>Por que escolher Celso Motorista?</h2>
             <ul>
-                <li><i class="fas fa-check"></i> Viagens seguras e confortáveis</li>
-                <li><i class="fas fa-check"></i> Motorista particular para eventos e viagens longas</li>
-                <li><i class="fas fa-check"></i> Atendimento 24h para suas necessidades</li>
-                <li><i class="fas fa-check"></i> Deslocamento rápido e pontual</li>
+                <li><i class="fas fa-check-circle"></i> Conforto e segurança</li>
+                <li><i class="fas fa-check-circle"></i> Pontualidade garantida</li>
+                <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
             </ul>
-            <a href="https://wa.me/+558892751332" class="cta-button">
-                <i class="fab fa-whatsapp"></i> Agende Sua Viagem Agora
+            <a href="https://api.whatsapp.com/send?phone=558892751332" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Agende Agora!
             </a>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Celso Motorista. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Celso Motorista. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
