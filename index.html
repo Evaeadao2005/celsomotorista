@@ -70,6 +70,10 @@
             padding: 0;
             background: #f8f9fa;
             color: #333;
+            min-height: 100vh; /* Aproveitar toda a altura da tela */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribuir o conteúdo */
         }
 
         header {
@@ -82,7 +86,7 @@
         }
 
         header img {
-            max-width: 10%; /* Logo discreta */
+            max-width: 20%; /* Logo maior em computadores */
             height: auto;
             margin: 0 auto 15px;
         }
@@ -106,6 +110,7 @@
             text-align: center;
             width: 100%;
             box-sizing: border-box;
+            flex-grow: 1; /* Permite que a seção ocupe o máximo de espaço disponível */
         }
 
         .main-section h2 {
@@ -166,12 +171,8 @@
 
         /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-
             header img {
-                max-width: 10%; /* Logo discreta para tablets */
+                max-width: 15%; /* Logo discreta para tablets */
             }
 
             .main-section {
@@ -191,7 +192,7 @@
 
         @media (max-width: 480px) {
             header img {
-                max-width: 15%; /* Logo discreta em smartphones */
+                max-width: 25%; /* Logo discreta em smartphones */
             }
 
             header h1 {
@@ -228,13 +229,12 @@
         <section class="main-section">
             <h2>Por Que Escolher Celso Motorista?</h2>
             <ul>
-                <li><i class="fas fa-car"></i> Transporte para Iguatu e todo o Brasil</li>
-                <li><i class="fas fa-user-tie"></i> Motorista experiente e confiável</li>
-                <li><i class="fas fa-clock"></i> Atendimento rápido e pontual</li>
-                <li><i class="fas fa-shield-alt"></i> Viagens seguras e confortáveis</li>
+                <li><i class="fas fa-check"></i> Viagens seguras e confortáveis</li>
+                <li><i class="fas fa-check"></i> Motorista particular para eventos e viagens longas</li>
+                <li><i class="fas fa-check"></i> Atendimento 24h para suas necessidades</li>
+                <li><i class="fas fa-check"></i> Deslocamento rápido e pontual</li>
             </ul>
-
-            <a href="https://wa.me/558892751332" class="cta-button">
+            <a href="https://wa.me/+558892751332" class="cta-button">
                 <i class="fab fa-whatsapp"></i> Agende Sua Viagem Agora
             </a>
         </section>
