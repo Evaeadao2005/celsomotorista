@@ -100,67 +100,68 @@
             font-size: 1.2em;
         }
 
-        .main-section {
-            background: #fff;
-            max-width: 100%;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-            flex-grow: 1; /* Permite que a seção ocupe o máximo de espaço disponível */
-        }
+       .main-section {
+        background: #fff;
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: left; /* Alinhamento à esquerda */
+        width: 100%;
+        box-sizing: border-box;
+        flex-grow: 1; /* Permite que a seção ocupe o máximo de espaço disponível */
+    }
 
-        .main-section h2 {
-            color: #ff7f50;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
+    .main-section h2 {
+        color: #ff7f50;
+        font-size: 2.5em; /* Maior tamanho para mais destaque */
+        margin-bottom: 30px;
+    }
 
-        .main-section ul {
-            list-style: none;
-            padding: 0;
-        }
+    .main-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px;
+    }
 
-        .main-section ul li {
-            font-size: 1.3em;
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-        }
+    .main-section ul li {
+        font-size: 1.4em; /* Maior tamanho de fonte */
+        margin: 15px 0;
+        display: flex;
+        align-items: flex-start; /* Alinha ícone ao texto */
+        font-weight: 600;
+    }
 
-        .main-section ul li i {
-            color: #ff7f50;
-            margin-right: 10px;
-        }
+    .main-section ul li i {
+        color: #ff7f50;
+        margin-right: 15px;
+        font-size: 1.5em; /* Aumenta os ícones */
+    }
 
-       .cta-button {
-    display: inline-block;
-    margin: 30px auto;
-    padding: 30px 40px; /* Aumentei o padding vertical */
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #fff;
-    background-color: #25D366; /* Cor do WhatsApp */
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 80%; /* Centraliza o botão */
-}
+    .cta-button {
+        display: block; /* Bloqueia para ocupar largura total */
+        margin: 30px 0;
+        padding: 20px 40px; /* Ajusta proporções do botão */
+        font-size: 1.8em; /* Botão com texto maior */
+        font-weight: bold;
+        color: #fff;
+        background-color: #25D366; /* Cor do WhatsApp */
+        border-radius: 12px; /* Bordas mais arredondadas */
+        text-align: center;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%; /* Largura total */
+    }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        .cta-button i {
-            margin-right: 8px;
-        }
-
+    .cta-button i {
+        margin-right: 10px;
+    }
         footer {
             background: #333;
             color: #fff;
