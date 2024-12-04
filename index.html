@@ -29,21 +29,22 @@
             background-color: #ff7f50;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
         }
 
         header img {
-            max-width: 150px;
+            max-width: 180px;
             height: auto;
         }
 
         header h1 {
-            font-size: 2.4em;
-            margin: 10px 0;
+            font-size: 2.5em;
+            margin: 15px 0;
         }
 
         header p {
-            font-size: 1.2em;
+            font-size: 1.5em;
+            margin-top: 10px;
         }
 
         .main-section {
@@ -61,39 +62,37 @@
             color: #ff7f50;
             font-size: 2.4em;
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        .services,
-        .differentials {
-            margin-top: 20px;
+        .services, .differentials {
+            margin-top: 30px;
         }
 
-        .services ul,
-        .differentials ul {
+        .services ul, .differentials ul {
             list-style: none;
             padding: 0;
+            margin-bottom: 30px;
         }
 
-        .services li,
-        .differentials li {
-            font-size: 1.2em;
-            margin: 15px 0;
+        .services li, .differentials li {
+            font-size: 1.5em;
+            margin: 20px 0;
             display: flex;
             align-items: center;
             gap: 15px;
         }
 
-        .services li i,
-        .differentials li i {
+        .services li i, .differentials li i {
             color: #ff7f50;
-            font-size: 1.5em;
+            font-size: 1.8em;
         }
 
         .cta-button {
             display: block;
-            margin: 30px auto;
-            padding: 15px 30px;
-            font-size: 1.8em;
+            margin: 40px auto;
+            padding: 18px 35px;
+            font-size: 1.6em;
             font-weight: bold;
             color: #fff;
             background-color: #25D366;
@@ -122,9 +121,21 @@
         }
 
         @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            header p {
+                font-size: 1.3em;
+            }
+
             .main-section {
                 padding: 25px;
-                margin: 15px;
+                margin: 10px;
+            }
+
+            .services li, .differentials li {
+                font-size: 1.4em;
             }
 
             .cta-button {
@@ -134,6 +145,18 @@
         }
 
         @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .services li, .differentials li {
+                font-size: 1.3em;
+            }
+
             .cta-button {
                 font-size: 1.3em;
                 padding: 18px 35px;
