@@ -63,6 +63,7 @@
         .main-section ul {
             list-style: none;
             padding: 0;
+            margin-bottom: 20px;
         }
 
         .main-section ul li {
@@ -70,11 +71,12 @@
             margin: 10px 0;
             display: flex;
             align-items: center;
+            word-wrap: break-word; /* Quebra o texto se for muito longo */
         }
 
         .main-section ul li i {
             color: #ff7f50;
-            margin-right: 12px; /* Ajustando o espaçamento do ícone */
+            margin-right: 12px;
         }
 
         .extra-info {
@@ -104,7 +106,7 @@
             text-decoration: none;
             text-align: center;
             width: fit-content;
-            white-space: nowrap; /* Garantindo que o botão não quebre para 2 linhas */
+            white-space: nowrap;
         }
 
         .cta-button:hover {
@@ -127,7 +129,7 @@
         }
 
         /* Ajustes de Responsividade */
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8em;
             }
@@ -152,6 +154,34 @@
 
             footer {
                 padding: 15px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            .main-section {
+                padding: 12px;
+            }
+
+            .cta-button {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+
+            .cta-button i {
+                margin-right: 6px;
+            }
+
+            .main-section ul li {
+                font-size: 0.9em;
+                margin: 6px 0;
+            }
+
+            footer {
+                padding: 12px 10px;
             }
         }
     </style>
