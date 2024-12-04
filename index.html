@@ -23,6 +23,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            animation: fadeIn 1s ease-out;
         }
 
         header {
@@ -30,6 +31,9 @@
             color: #fff;
             text-align: center;
             padding: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.2s;
         }
 
         header img {
@@ -56,6 +60,9 @@
             flex-grow: 1;
             max-width: 900px;
             position: relative;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.5s;
         }
 
         .main-section h2 {
@@ -76,6 +83,9 @@
             display: flex;
             align-items: center;
             gap: 15px; 
+            opacity: 0;
+            animation: fadeInLeft 0.8s ease-out forwards;
+            animation-delay: 1s;
         }
 
         .main-section ul li i {
@@ -97,6 +107,9 @@
             width: 100%;
             max-width: 350px;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 1.5s;
         }
 
         .cta-button:hover {
@@ -117,6 +130,41 @@
             position: relative;
             bottom: 0;
             width: 100%;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 2s;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         /* Ajustes de Responsividade */
@@ -190,6 +238,11 @@
 
     <main>
         <section class="main-section">
+            <!-- CTA na parte superior da main-section -->
+            <a href="https://api.whatsapp.com/send?phone=558892751332" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Agende sua viagem agora!
+            </a>
+
             <h2>Por que escolher o Celso Motorista?</h2>
             <ul>
                 <li><i class="fas fa-check-circle"></i> Conforto e segurança garantidos</li>
@@ -208,18 +261,12 @@
                 <p><i class="fas fa-smile"></i> Atendimento amigável e profissional</p>
                 <p><i class="fas fa-shield-alt"></i> Seguro para passageiros</p>
                 <p><i class="fas fa-wifi"></i> Internet a bordo</p>
-                <p><i class="fas fa-snowflake"></i> Ar-condicionado para maior conforto</p>
             </div>
-
-            <!-- CTA principal agora em destaque -->
-            <a href="https://api.whatsapp.com/send?phone=558892751332" class="cta-button">
-                <i class="fab fa-whatsapp"></i> Agende sua viagem agora!
-            </a>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Celso Motorista. Todos os direitos reservados. | Iguatu-CE</p>
-    </footer>
+        <footer>
+            <p>&copy; 2024 Celso Motorista | Todos os direitos reservados</p>
+        </footer>
+    </main>
 </body>
 </html>
