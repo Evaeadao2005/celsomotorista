@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +5,9 @@
     <meta name="description" content="Celso Motorista oferece transporte particular com conforto e segurança em viagens curtas e longas, intermunicipais e interestaduais.">
     <meta name="keywords" content="transporte particular, motorista particular, viagens curtas, longas, intermunicipais, interestaduais, transporte seguro">
     <meta name="author" content="Celso Motorista">
+    <meta name="google-site-verification" content="google-verification-code"> <!-- Adicione sua verificação do Google aqui -->
     <title>Celso Motorista - Motorista Particular de Excelência</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -111,9 +111,11 @@
         .services li:nth-child(1), .differentials li:nth-child(1) {
             animation-delay: 0.2s;
         }
+
         .services li:nth-child(2), .differentials li:nth-child(2) {
             animation-delay: 0.4s;
         }
+
         .services li:nth-child(3), .differentials li:nth-child(3) {
             animation-delay: 0.6s;
         }
@@ -197,51 +199,90 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2em;
-            }
+        .reviews-section {
+            margin-top: 40px;
+            text-align: center;
+        }
 
-            header p {
-                font-size: 1.3em;
-            }
+        .reviews-section h3 {
+            font-size: 2em;
+            color: #ff7f50;
+            margin-bottom: 20px;
+        }
 
-            .main-section {
-                padding: 25px;
-                margin: 10px;
-            }
+        .reviews-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-            .services li, .differentials li {
-                font-size: 1.4em;
-            }
+        .review-item {
+            background: #f1f1f1;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInReview 1s forwards;
+        }
 
-            .cta-button {
-                font-size: 1.5em;
-                padding: 20px 40px;
+        .review-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .review-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .review-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeInReview {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
+        .review-item .review-author {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
 
-            header p {
-                font-size: 1.2em;
-            }
+        .review-item .review-comment {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
 
-            .services li, .differentials li {
-                font-size: 1.3em;
-            }
+        .review-item a {
+            color: #ff7f50;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-            .cta-button {
-                font-size: 1.3em;
-                padding: 18px 35px;
-            }
+        .review-item a:hover {
+            text-decoration: underline;
+        }
+
+        .reviews-section a {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .reviews-section a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
     <header>
         <img src="/logocelso.png" alt="Logotipo Celso Motorista">
         <h1>Celso Motorista</h1>
@@ -268,17 +309,38 @@
                 <h3>Diferenciais:</h3>
                 <ul>
                     <li><i class="fas fa-car-side"></i> Veículo sempre limpo e higienizado</li>
-                    <li><i class="fas fa-smile"></i> Atendimento amigável e profissional</li>
-                    <li><i class="fas fa-shield-alt"></i> Seguro para passageiros</li>
-                    <li><i class="fas fa-wifi"></i> Internet a bordo</li>
+                    <li><i class="fas fa-shield-alt"></i> Motorista profissional e experiente</li>
+                    <li><i class="fas fa-clock"></i> Pontualidade e compromisso com o cliente</li>
                 </ul>
             </div>
         </section>
 
-     <footer>
-    <p>© 2024 Celso Motorista - Todos os direitos reservados - Assessoria e desenvolvimento estratégico por <a href="https://instagram.com/agenciadalmon" target="_blank">Agência Dalmon - @agenciadalmon</a>
-    </p>
-</footer>
+        <section class="reviews-section">
+            <h3>O que nossos clientes dizem:</h3>
+            <ul class="reviews-list">
+                <li class="review-item">
+                    <div class="review-author">Ana Souza</div>
+                    <div class="review-comment">"A experiência foi excelente! Motorista pontual e carro confortável, super recomendo!"</div>
+                    <a href="https://g.page/r/Cd8jFkLrlZdQEAI/" target="_blank">Deixe sua avaliação aqui!</a>
+                </li>
+                <li class="review-item">
+                    <div class="review-author">João Silva</div>
+                    <div class="review-comment">"Transporte seguro e rápido. Atendimento impecável. Vou contratar mais vezes!"</div>
+                    <a href="https://g.page/r/Cd8jFkLrlZdQEAI/" target="_blank">Deixe sua avaliação aqui!</a>
+                </li>
+                <li class="review-item">
+                    <div class="review-author">Carlos Lima</div>
+                    <div class="review-comment">"Muito profissional, a viagem foi tranquila e segura. Indico a todos!"</div>
+                    <a href="https://g.page/r/Cd8jFkLrlZdQEAI/" target="_blank">Deixe sua avaliação aqui!</a>
+                </li>
+            </ul>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Celso Motorista. Todos os direitos reservados. <a href="https://www.facebook.com/celsomotorista" target="_blank">Siga-nos no Facebook</a></p>
+        <p>Feito com <span style="color: #ff7f50;">&hearts;</span> por <a href="https://www.instagram.com/agenciadalmon" target="_blank">@agenciadalmon</a></p>
+    </footer>
+
 </body>
 </html>
