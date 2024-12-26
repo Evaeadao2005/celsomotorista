@@ -289,6 +289,26 @@
         .reviews-section a:hover {
             text-decoration: underline;
         }
+
+        /* Adicionando ícone do WhatsApp */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 2em;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 <body>
@@ -301,56 +321,61 @@
 
     <main>
         <section class="main-section">
-            <a href="https://wa.me/558892751332?text=Ol%C3%A1%20Celso%2C%20vim%20pela%20%40agenciadalmon%2C%20desejo%20saber%20mais%20sobre%20seu%20servi%C3%A7o%20de%20*Motorista*%2C%20pois%20tenho%20interesse%20em%20fazer%20uma%20corrida%2Fviagem." class="cta-button">
-                <i class="fab fa-whatsapp"></i> Agende sua viagem agora!
+            <a href="https://wa.me/558892751332?text=Oi%20Celso%2C%20quero%20mais%20informações%20sobre%20o%20seu%20servi%C3%A7o" class="cta-button" target="_blank">
+                Solicite seu serviço agora!
             </a>
+        </section>
 
-            <h2>Por que escolher o Celso Motorista?</h2>
+        <section class="main-section">
+            <h2>Serviços</h2>
             <div class="services">
-                <h3>Serviços Oferecidos:</h3>
                 <ul>
-                    <li><i class="fas fa-road"></i> Viagens curtas e longas</li>
-                    <li><i class="fas fa-car"></i> Transporte intermunicipal e interestadual</li>
-                    <li><i class="fas fa-briefcase"></i> Transporte corporativo e particular</li>
+                    <li><i class="fa fa-car"></i> Transporte particular em Iguatu e região</li>
+                    <li><i class="fa fa-map-marker-alt"></i> Viagens curtas e longas para Iguatu, Crato, Barbalha e Juazeiro do Norte</li>
+                    <li><i class="fa fa-road"></i> Viagens intermunicipais e interestaduais</li>
+                    <li><i class="fa fa-bus"></i> Transporte para aeroportos e rodoviárias</li>
                 </ul>
             </div>
+        </section>
 
+        <section class="main-section">
+            <h2>Differenciais</h2>
             <div class="differentials">
-                <h3>Diferenciais:</h3>
                 <ul>
-                    <li><i class="fas fa-car-side"></i> Veículo sempre limpo e higienizado</li>
-                    <li><i class="fas fa-shield-alt"></i> Motorista profissional e experiente</li>
-                    <li><i class="fas fa-clock"></i> Pontualidade e compromisso com o cliente</li>
+                    <li><i class="fa fa-star"></i> Motorista experiente e confiável</li>
+                    <li><i class="fa fa-shield-alt"></i> Segurança e pontualidade garantidas</li>
+                    <li><i class="fa fa-suitcase"></i> Transporte confortável e sem stress</li>
                 </ul>
             </div>
         </section>
 
         <section class="reviews-section">
-            <h3>O que nossos clientes dizem:</h3>
+            <h3>Avaliações</h3>
             <ul class="reviews-list">
                 <li class="review-item">
-                    <div class="review-author">Ana Souza</div>
-                    <div class="review-comment">"A experiência foi excelente! Motorista pontual e carro confortável, super recomendo!"</div>
-                    <a href="https://g.page/r/Cd8jFkLrlZdQEAI/" target="_blank">Deixe sua avaliação aqui!</a>
+                    <p class="review-author">Maria Souza</p>
+                    <p class="review-comment">"O Celso é super pontual e o carro é muito confortável. Super recomendo!"</p>
                 </li>
                 <li class="review-item">
-                    <div class="review-author">João Silva</div>
-                    <div class="review-comment">"Transporte seguro e rápido. Atendimento impecável. Vou contratar mais vezes!"</div>
-                    <a href="https://g.page/r/Cd8jFkLrlZdQEAI/" target="_blank">Deixe sua avaliação aqui!</a>
+                    <p class="review-author">João Oliveira</p>
+                    <p class="review-comment">"Fiquei impressionado com a segurança e o atendimento de qualidade. Muito bom!"</p>
                 </li>
                 <li class="review-item">
-                    <div class="review-author">Carlos Lima</div>
-                    <div class="review-comment">"Muito profissional, a viagem foi tranquila e segura. Indico a todos!"</div>
-                    <a href="https://g.page/r/Cd8jFkLrlZdQEAI/" target="_blank">Deixe sua avaliação aqui!</a>
+                    <p class="review-author">Ana Costa</p>
+                    <p class="review-comment">"O melhor motorista da região! Sempre muito atencioso e profissional."</p>
                 </li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Celso Motorista. Todos os direitos reservados. <a href="https://www.facebook.com/celsomotorista" target="_blank">Siga-nos no Facebook</a></p>
-        <p>Feito com <span style="color: #ff7f50;">&hearts;</span> por <a href="https://www.instagram.com/agenciadalmon" target="_blank">@agenciadalmon</a></p>
+        <p>&copy; 2024 Celso Motorista - Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Ícone do WhatsApp -->
+    <a href="https://wa.me/558892751332?text=Oi%20Celso%2C%20quero%20mais%20informações%20sobre%20o%20seu%20servi%C3%A7o" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
