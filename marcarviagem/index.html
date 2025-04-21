@@ -1,217 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Celso Motorista oferece transporte seguro e confortável em Iguatu e todas as cidades do Brasil. Calcule seu orçamento ou marque uma corrida agora mesmo!" />
-    <meta name="author" content="Celso Motorista" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Celso Motorista - Transporte Seguro e Confortável em Iguatu" />
-    <meta property="og:description" content="Calcule o orçamento da sua viagem ou marque uma corrida diretamente pelo WhatsApp com Celso. Oferecemos transporte intermunicipal e interestadual." />
-    <meta property="og:url" content="https://www.celsomotorista.com.br" />
-    <meta name="twitter:title" content="Celso Motorista - Transporte Seguro e Confortável em Iguatu" />
-    <meta name="twitter:description" content="Oferecemos transporte seguro e confortável para todas as cidades do Brasil. Calcule seu orçamento ou marque sua corrida agora mesmo pelo WhatsApp." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Celso Motorista oferece transporte seguro e confortável em Iguatu e todas as cidades do Brasil. Calcule seu orçamento ou marque uma corrida agora mesmo!" />
+  <meta name="author" content="Celso Motorista" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Celso Motorista - Transporte Seguro e Confortável em Iguatu" />
+  <meta property="og:description" content="Calcule o orçamento da sua viagem ou marque uma corrida diretamente pelo WhatsApp com Celso. Oferecemos transporte intermunicipal e interestadual." />
+  <meta property="og:url" content="https://www.celsomotorista.com.br" />
+  <meta name="twitter:title" content="Celso Motorista - Transporte Seguro e Confortável em Iguatu" />
+  <meta name="twitter:description" content="Oferecemos transporte seguro e confortável para todas as cidades do Brasil. Calcule seu orçamento ou marque sua corrida agora mesmo pelo WhatsApp." />
 
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Celso Motorista" />
-    <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Celso Motorista" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    <title>Celso Motorista - Transporte Seguro e Confortável</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <title>Celso Motorista - Transporte Seguro e Confortável</title>
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f8f9fa;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            animation: fadeInPage 1.2s ease-out;
-        }
-        @keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
-        header {
-            background-color: #ff7f50;
-            color: #fff;
-            text-align: center;
-            padding: 30px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        header img {
-            max-width: 180px;
-            height: auto;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin: 15px 0;
-        }
-        header p {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        .main-section {
-            background: #fff;
-            margin: 20px auto;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            flex-grow: 1;
-            max-width: 900px;
-        }
-        .main-section h2 {
-            color: #ff7f50;
-            font-size: 2.4em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .cta-button {
-            display: block;
-            margin: 40px auto;
-            padding: 18px 35px;
-            font-size: 1.6em;
-            font-weight: bold;
-            color: #fff;
-            background-color: #25D366;
-            border-radius: 12px;
-            text-decoration: none;
-            text-align: center;
-            width: 100%;
-            max-width: 350px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #128C7E;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            animation: slideUpFooter 0.8s ease-in-out;
-        }
-        @keyframes slideUpFooter { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .whatsapp-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            padding: 15px;
-            border-radius: 50%;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            color: white;
-            font-size: 2em;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-            z-index: 1000;
-        }
-        .whatsapp-icon:hover { transform: scale(1.1); }
-        .form-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .form-container input,
-        .form-container button {
-            padding: 12px 18px;
-            font-size: 1.2em;
-            margin: 10px 5px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
-        .form-container button {
-            background-color: #ff7f50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        .form-container button:hover {
-            background-color: #e56b3e;
-        }
-    </style><!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '574168482217998');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=574168482217998&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      animation: fadeInPage 1.2s ease-out;
+    }
+    @keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+    header {
+      background-color: #ff7f50;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header img {
+      max-width: 180px;
+      height: auto;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 15px 0;
+    }
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    .main-section {
+      background: #fff;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      flex-grow: 1;
+      max-width: 900px;
+    }
+    .main-section h2 {
+      color: #ff7f50;
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .cta-button {
+      display: block;
+      margin: 40px auto;
+      padding: 18px 35px;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #fff;
+      background-color: #25D366;
+      border-radius: 12px;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #128C7E;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      animation: slideUpFooter 0.8s ease-in-out;
+    }
+    @keyframes slideUpFooter { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      color: white;
+      font-size: 2em;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+    .whatsapp-icon:hover { transform: scale(1.1); }
+    .form-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .form-container input,
+    .form-container button {
+      padding: 12px 18px;
+      font-size: 1.2em;
+      margin: 10px 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .form-container button {
+      background-color: #ff7f50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background-color: #e56b3e;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="/logocelso.png" alt="Logotipo Celso Motorista" />
-    <h1>Celso Motorista</h1>
-    <p>Conforto e segurança para suas viagens, intermunicipais e interestaduais.</p>
+  <img src="/logocelso.png" alt="Logotipo Celso Motorista" />
+  <h1>Celso Motorista</h1>
+  <p>Conforto e segurança para suas viagens, intermunicipais e interestaduais.</p>
 </header>
 
 <main>
-    <section class="main-section">
-        <h2>Calcule seu Orçamento ou Marque sua Corrida</h2>
+  <section class="main-section">
+    <h2>Calcule seu Orçamento ou Marque sua Corrida</h2>
 
-        <!-- Formulário de orçamento -->
-        <div class="form-container">
-            <form id="orçamento-form">
-                <input type="text" id="origem" placeholder="Digite a cidade de origem" required />
-                <input type="text" id="destino" placeholder="Digite a cidade de destino" required />
-                <button type="submit" data-cta="contact">Calcular Orçamento</button>
-            </form>
-        </div>
+    <!-- Formulário de orçamento -->
+    <div class="form-container">
+      <form id="orçamento-form">
+        <input type="text" id="origem" placeholder="Digite a cidade de origem" required />
+        <input type="text" id="destino" placeholder="Digite a cidade de destino" required />
+        <button type="submit">Calcular Orçamento</button>
+      </form>
+    </div>
 
-        <!-- Botão marcar corrida -->
-        <div class="form-container">
-            <a href="https://wa.me/558892751332?text=Oi%2C%20quero%20marcar%20uma%20corrida%20em%20Iguatu." target="_blank" data-cta="contact">
-                <button type="button">Marcar Corrida em Iguatu</button>
-            </a>
-        </div>
-    </section>
+    <!-- Botão marcar corrida -->
+    <div class="form-container">
+      <button id="marcar-corrida">Marcar Corrida em Iguatu</button>
+    </div>
+  </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Celso Motorista - Todos os direitos reservados.</p>
+  <p>&copy; 2025 Celso Motorista - Todos os direitos reservados.</p>
 </footer>
 
 <!-- Botão flutuante do WhatsApp -->
-<a href="https://wa.me/558892751332?text=Oi%20Celso%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20servi%C3%A7o" class="whatsapp-icon" target="_blank" data-cta="contact">
-    <i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/558892751332?text=Oi%20Celso%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20seu%20servi%C3%A7o" class="whatsapp-icon" target="_blank">
+  <i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
-    document.getElementById('orçamento-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var origem = document.getElementById('origem').value;
-        var destino = document.getElementById('destino').value;
-        var mensagem = `Oi, quero calcular o orçamento para a viagem de ${origem} para ${destino}.`;
-        var whatsappUrl = `https://wa.me/558892751332?text=${encodeURIComponent(mensagem)}`;
-        window.open(whatsappUrl, '_blank');
-    });
+  const form = document.getElementById('orçamento-form');
+  const origemInput = document.getElementById('origem');
+  const destinoInput = document.getElementById('destino');
+  const marcarButton = document.getElementById('marcar-corrida');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const origem = origemInput.value.trim();
+    const destino = destinoInput.value.trim();
+    if (!origem || !destino) return;
+
+    const mensagem = `Oi, quero calcular o orçamento para a viagem de ${origem} para ${destino}.`;
+    const url = `https://wa.me/558892751332?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  });
+
+  marcarButton.addEventListener('click', function() {
+    const origem = origemInput.value.trim();
+    const destino = destinoInput.value.trim();
+    if (!origem || !destino) {
+      alert("Preencha origem e destino para marcar uma corrida.");
+      return;
+    }
+
+    const mensagem = `Oi, quero marcar uma corrida de ${origem} para ${destino}.`;
+    const url = `https://wa.me/558892751332?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  });
 </script>
 
 </body>
