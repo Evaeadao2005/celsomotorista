@@ -1,0 +1,96 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celso Motorista oferece transporte seguro e confortável em Iguatu e todas as cidades do Brasil. Calcule seu orçamento ou marque uma corrida agora mesmo!">
+    <meta name="author" content="Celso Motorista">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Celso Motorista - Transporte Seguro e Confortável em Iguatu">
+    <meta property="og:description" content="Calcule o orçamento da sua viagem ou marque uma corrida diretamente pelo WhatsApp com Celso. Oferecemos transporte intermunicipal e interestadual.">
+    <meta property="og:url" content="https://www.celsomotorista.com.br">
+    <meta name="twitter:title" content="Celso Motorista - Transporte Seguro e Confortável em Iguatu">
+    <meta name="twitter:description" content="Oferecemos transporte seguro e confortável para todas as cidades do Brasil. Calcule seu orçamento ou marque sua corrida agora mesmo pelo WhatsApp.">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Celso Motorista - Transporte Seguro e Confortável</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; display: flex; flex-direction: column; min-height: 100vh; animation: fadeInPage 1.2s ease-out; }
+        @keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } }
+        header { background-color: #ff7f50; color: #fff; text-align: center; padding: 30px; animation: fadeIn 1.5s ease-in-out; }
+        header img { max-width: 180px; height: auto; }
+        header h1 { font-size: 2.5em; margin: 15px 0; }
+        header p { font-size: 1.5em; margin-top: 10px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .main-section { background: #fff; margin: 20px auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); text-align: left; flex-grow: 1; max-width: 900px; }
+        .main-section h2 { color: #ff7f50; font-size: 2.4em; margin-bottom: 20px; text-align: center; }
+        .cta-button { display: block; margin: 40px auto; padding: 18px 35px; font-size: 1.6em; font-weight: bold; color: #fff; background-color: #25D366; border-radius: 12px; text-decoration: none; text-align: center; width: 100%; max-width: 350px; transition: background-color 0.3s ease, transform 0.3s ease; }
+        .cta-button:hover { background-color: #128C7E; transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); }
+        footer { background: #333; color: #fff; text-align: center; padding: 20px 10px; position: relative; bottom: 0; width: 100%; animation: slideUpFooter 0.8s ease-in-out; }
+        @keyframes slideUpFooter { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        footer a { color: #fff; text-decoration: none; font-weight: bold; }
+        footer a:hover { text-decoration: underline; }
+        .whatsapp-icon { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; padding: 15px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); color: white; font-size: 2em; text-decoration: none; transition: transform 0.3s ease; }
+        .whatsapp-icon:hover { transform: scale(1.1); }
+        .form-container { margin: 20px 0; text-align: center; }
+        .form-container input, .form-container button { padding: 12px 18px; font-size: 1.2em; margin: 10px 5px; border-radius: 6px; border: 1px solid #ccc; }
+        .form-container button { background-color: #ff7f50; color: #fff; border: none; cursor: pointer; }
+        .form-container button:hover { background-color: #e56b3e; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="/logocelso.png" alt="Logotipo Celso Motorista">
+    <h1>Celso Motorista</h1>
+    <p>Conforto e segurança para suas viagens, intermunicipais e interestaduais.</p>
+</header>
+
+<main>
+    <section class="main-section">
+        <h2>Calcule seu Orçamento ou Marque sua Corrida</h2>
+        <div class="form-container">
+            <form id="orçamento-form">
+                <input type="text" id="origem" placeholder="Digite a cidade de origem" required>
+                <input type="text" id="destino" placeholder="Digite a cidade de destino" required>
+                <button type="submit">Calcular Orçamento</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="https://wa.me/558892751332" method="get" target="_blank">
+                <input type="hidden" name="text" value="Oi, quero marcar uma corrida em Iguatu.">
+                <button type="submit">Marcar Corrida em Iguatu</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Celso Motorista - Todos os direitos reservados.</p>
+</footer>
+
+<!-- Ícone do WhatsApp -->
+<a href="https://wa.me/558892751332?text=Oi%20Celso%2C%20quero%20mais%20informações%20sobre%20o%20seu%20servi%C3%A7o" class="whatsapp-icon" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+document.getElementById('orçamento-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var origem = document.getElementById('origem').value;
+    var destino = document.getElementById('destino').value;
+
+    var mensagem = `Oi, quero calcular o orçamento para a viagem de ${origem} para ${destino}.`;
+
+    var whatsappUrl = `https://wa.me/558892751332?text=${encodeURIComponent(mensagem)}`;
+    window.open(whatsappUrl, '_blank');
+});
+</script>
+
+</body>
+</html>
