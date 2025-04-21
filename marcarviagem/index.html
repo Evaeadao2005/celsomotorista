@@ -150,6 +150,24 @@
 </head>
 <body>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '574168482217998');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=574168482217998&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <header>
   <img src="/logocelso.png" alt="Logotipo Celso Motorista" />
   <h1>Celso Motorista</h1>
@@ -195,7 +213,13 @@
     event.preventDefault();
     const origem = origemInput.value.trim();
     const destino = destinoInput.value.trim();
-    if (!origem || !destino) return;
+    if (!origem || !destino) {
+      // Não dispara o evento do pixel se os campos estiverem vazios
+      return;
+    }
+
+    // Disparar evento do Pixel aqui
+    fbq('track', 'RequestQuotation');
 
     const mensagem = `Oi, quero calcular o orçamento para a viagem de ${origem} para ${destino}.`;
     const url = `https://wa.me/558892751332?text=${encodeURIComponent(mensagem)}`;
