@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indicação Celso Motorista</title>
+    <meta name="description" content="Indique um amigo para o Celso Motorista e ganhe uma corrida gratuita em Iguatu. Promoção válida para novos clientes que informarem seu número no primeiro contato." />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --azul: #0b3d63;
+            --azul-claro: #1565a5;
+            --fundo: #f3f7fb;
+            --texto: #0f172a;
+            --cinza: #4b5563;
+            --verde: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--fundo);
+            color: var(--texto);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            color: #fff;
+            padding: 56px 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 16px;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            line-height: 1.2;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: clamp(1.05rem, 3vw, 1.25rem);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 960px;
+            margin: -32px auto 48px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+            padding: clamp(24px, 5vw, 40px);
+            display: grid;
+            gap: 32px;
+        }
+
+        .passo-a-passo {
+            display: grid;
+            gap: 18px;
+        }
+
+        .passo {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: rgba(15, 23, 42, 0.03);
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .passo-numero {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(21, 101, 165, 0.16);
+            color: var(--azul);
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .passo strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .destaque {
+            background: rgba(37, 211, 102, 0.12);
+            border: 1px solid rgba(37, 211, 102, 0.4);
+            border-radius: 18px;
+            padding: 20px;
+        }
+
+        .destaque h2 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .formulario {
+            display: grid;
+            gap: 14px;
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--cinza);
+        }
+
+        input[type="tel"] {
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 2px solid rgba(15, 23, 42, 0.12);
+            font-size: 1.05rem;
+        }
+
+        input[type="tel"]:focus {
+            outline: none;
+            border-color: var(--azul-claro);
+            box-shadow: 0 0 0 3px rgba(21, 101, 165, 0.2);
+        }
+
+        .acoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        button,
+        .botao-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+        }
+
+        button {
+            background: var(--verde);
+            color: #0f172a;
+        }
+
+        button:disabled {
+            background: rgba(37, 211, 102, 0.4);
+            cursor: not-allowed;
+        }
+
+        .botao-link {
+            background: var(--azul);
+            color: #fff;
+        }
+
+        button:hover:not(:disabled),
+        .botao-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .aviso {
+            font-size: 0.95rem;
+            color: var(--cinza);
+            line-height: 1.6;
+        }
+
+        .mensagem-pronta {
+            background: rgba(15, 23, 42, 0.06);
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            display: none;
+            white-space: pre-line;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 20px 40px;
+            color: var(--cinza);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .passo {
+                flex-direction: column;
+            }
+
+            .passo-numero {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/logocelso.png" alt="Celso Motorista" />
+        <h1>Indique um amigo e ganhe uma corrida em Iguatu</h1>
+        <p>Funciona assim: o novo passageiro informa o seu número de WhatsApp e ganha a primeira corrida. Depois o Celso agenda a sua corrida gratuita.</p>
+    </header>
+
+    <main>
+        <section class="card" aria-labelledby="passos">
+            <div class="passo-a-passo" id="passos">
+                <div class="passo">
+                    <span class="passo-numero">1</span>
+                    <div>
+                        <strong>Você compartilha o contato do Celso</strong>
+                        <p>Mostre para amigos ou clientes que ainda não viajaram com ele. O atendimento é sempre pelo WhatsApp oficial.</p>
+                    </div>
+                </div>
+                <div class="passo">
+                    <span class="passo-numero">2</span>
+                    <div>
+                        <strong>O amigo fala o seu número</strong>
+                        <p>No primeiro contato, ele diz que foi indicado por você e informa o seu WhatsApp. Só vale para novos passageiros.</p>
+                    </div>
+                </div>
+                <div class="passo">
+                    <span class="passo-numero">3</span>
+                    <div>
+                        <strong>Você ganha a corrida gratuita</strong>
+                        <p>Assim que a primeira corrida do amigo terminar, o Celso confere os dados e combina a sua viagem grátis dentro de Iguatu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destaque">
+                <h2>Preencha com o SEU WhatsApp</h2>
+                <p style="margin-bottom: 12px;">O número precisa ter DDD. Vamos usar esse dado na mensagem automática para o seu amigo.</p>
+                <div class="formulario">
+                    <label for="numero-indicador">Seu número com DDD (apenas números)</label>
+                    <input id="numero-indicador" type="tel" inputmode="numeric" placeholder="Ex.: 88991234567" autocomplete="tel" aria-describedby="ajuda-numero" />
+                    <span id="ajuda-numero" class="aviso">Use somente números, sem espaços. Exemplo: 88991234567.</span>
+                    <div class="acoes">
+                        <button id="botao-whatsapp" disabled><i class="fab fa-whatsapp"></i> Enviar convite agora</button>
+                        <a id="botao-copiar" class="botao-link" href="#"><i class="fas fa-copy"></i> Copiar mensagem pronta</a>
+                    </div>
+                    <div id="mensagem-pronta" class="mensagem-pronta"></div>
+                    <span id="feedback" class="aviso" style="display:none; color: var(--azul-claro); font-weight: 600;">Mensagem copiada! É só colar no WhatsApp.</span>
+                </div>
+            </div>
+
+            <div class="aviso">
+                <strong>Importante lembrar:</strong>
+                <ul style="margin-top: 10px; margin-left: 20px; list-style: disc;">
+                    <li>A promoção vale somente para quem nunca fez corrida com o Celso Motorista pelo WhatsApp.</li>
+                    <li>O novo cliente precisa informar o seu número no primeiro contato para liberar o bônus.</li>
+                    <li>A sua corrida gratuita é válida em Iguatu. O Celso também faz viagens para outras cidades e estados com valores combinados pelo WhatsApp.</li>
+                    <li>Promoção sujeita à agenda disponível. Pode ser encerrada sem aviso prévio.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="ano"></span> Celso Motorista • Transporte particular em Iguatu, CE
+    </footer>
+
+    <script>
+        const numeroInput = document.getElementById('numero-indicador');
+        const botaoWhatsapp = document.getElementById('botao-whatsapp');
+        const botaoCopiar = document.getElementById('botao-copiar');
+        const mensagemPronta = document.getElementById('mensagem-pronta');
+        const feedback = document.getElementById('feedback');
+
+        function limparNumero(valor) {
+            return valor.replace(/\D/g, '');
+        }
+
+        function numeroValido(valor) {
+            return /^\d{10,13}$/.test(valor);
+        }
+
+        function gerarMensagem(numeroLimpo) {
+            return `Oi! O Celso Motorista cuida das minhas corridas em Iguatu.\n\nEstou te indicando agora e meu número é (${formatarNumero(numeroLimpo)}). Fala pra ele que foi indicado por mim pra garantir a sua primeira corrida gratuita!\n\nAtendimento no WhatsApp: https://wa.me/5588999301811\n\nEle também faz viagens para outras cidades e até para outros estados.`;
+        }
+
+        function formatarNumero(numero) {
+            if (numero.length === 10) {
+                return `${numero.slice(0, 2)} ${numero.slice(2, 6)}-${numero.slice(6)}`;
+            }
+            if (numero.length === 11) {
+                return `${numero.slice(0, 2)} ${numero.slice(2, 7)}-${numero.slice(7)}`;
+            }
+            return numero;
+        }
+
+        function atualizarEstado() {
+            const numeroLimpo = limparNumero(numeroInput.value);
+            const valido = numeroValido(numeroLimpo);
+
+            botaoWhatsapp.disabled = !valido;
+            mensagemPronta.style.display = valido ? 'block' : 'none';
+            feedback.style.display = 'none';
+
+            if (valido) {
+                const mensagem = gerarMensagem(numeroLimpo);
+                mensagemPronta.textContent = mensagem;
+                botaoWhatsapp.dataset.link = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
+                botaoCopiar.dataset.mensagem = mensagem;
+            } else {
+                mensagemPronta.textContent = '';
+                delete botaoWhatsapp.dataset.link;
+                delete botaoCopiar.dataset.mensagem;
+            }
+        }
+
+        numeroInput.addEventListener('input', atualizarEstado);
+
+        botaoWhatsapp.addEventListener('click', () => {
+            if (!botaoWhatsapp.dataset.link) return;
+            window.open(botaoWhatsapp.dataset.link, '_blank');
+        });
+
+        botaoCopiar.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (!botaoCopiar.dataset.mensagem) return;
+            const mensagem = botaoCopiar.dataset.mensagem;
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(mensagem).then(() => {
+                    feedback.style.display = 'inline';
+                });
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = mensagem;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    feedback.style.display = 'inline';
+                } catch (err) {
+                    alert('Não foi possível copiar automaticamente. Copie manualmente:\n\n' + mensagem);
+                }
+                document.body.removeChild(textarea);
+            }
+        });
+
+        document.getElementById('ano').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
