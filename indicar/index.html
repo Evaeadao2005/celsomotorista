@@ -4,222 +4,175 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indicação Celso Motorista</title>
-    <meta name="description" content="Indique um amigo para o Celso Motorista e ganhe uma corrida gratuita em Iguatu. Promoção válida para novos clientes que informarem seu número no primeiro contato." />
+    <meta name="description" content="Indique um amigo para o Celso Motorista e ganhe uma corrida gratuita em Iguatu. Promoção válida para novos clientes." />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
     <style>
         :root {
-            --azul: #0b3d63;
-            --azul-claro: #1565a5;
-            --fundo: #f3f7fb;
-            --texto: #0f172a;
-            --cinza: #4b5563;
-            --verde: #25d366;
+            color-scheme: light;
         }
 
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--fundo);
-            color: var(--texto);
-            min-height: 100vh;
+            margin: 0;
+            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            background: #f4f6fb;
+            color: #162037;
         }
 
         header {
-            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            background: #153c6a;
             color: #fff;
-            padding: 56px 20px;
             text-align: center;
+            padding: 48px 20px 40px;
         }
 
         header img {
-            width: 120px;
+            width: 110px;
             height: auto;
             margin-bottom: 16px;
         }
 
         header h1 {
-            font-size: clamp(2rem, 5vw, 2.8rem);
-            line-height: 1.2;
-            margin-bottom: 12px;
+            font-size: clamp(2rem, 6vw, 2.6rem);
+            margin: 0 0 12px;
             font-weight: 700;
         }
 
         header p {
-            font-size: clamp(1.05rem, 3vw, 1.25rem);
-            max-width: 680px;
-            margin: 0 auto;
+            margin: 0;
+            font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+            line-height: 1.5;
         }
 
         main {
-            max-width: 960px;
+            max-width: 760px;
             margin: -32px auto 48px;
             padding: 0 20px;
         }
 
-        .card {
+        .cartao {
             background: #fff;
             border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
-            padding: clamp(24px, 5vw, 40px);
+            padding: clamp(24px, 5vw, 36px);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
             display: grid;
-            gap: 32px;
+            gap: 28px;
         }
 
-        .passo-a-passo {
+        h2 {
+            font-size: 1.4rem;
+            margin: 0 0 12px;
+        }
+
+        ol {
+            margin: 0;
+            padding-left: 20px;
             display: grid;
-            gap: 18px;
-        }
-
-        .passo {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            background: rgba(15, 23, 42, 0.03);
-            border-radius: 14px;
-            padding: 16px;
-        }
-
-        .passo-numero {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            background: rgba(21, 101, 165, 0.16);
-            color: var(--azul);
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .passo strong {
-            display: block;
+            gap: 12px;
             font-size: 1.05rem;
-            margin-bottom: 6px;
+            line-height: 1.5;
         }
 
-        .destaque {
-            background: rgba(37, 211, 102, 0.12);
-            border: 1px solid rgba(37, 211, 102, 0.4);
-            border-radius: 18px;
-            padding: 20px;
-        }
-
-        .destaque h2 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
+        .passos strong {
+            display: block;
         }
 
         .formulario {
             display: grid;
-            gap: 14px;
+            gap: 12px;
         }
 
         label {
             font-weight: 600;
-            color: var(--cinza);
         }
 
         input[type="tel"] {
             padding: 14px 16px;
             border-radius: 12px;
-            border: 2px solid rgba(15, 23, 42, 0.12);
+            border: 2px solid #d4d9e5;
             font-size: 1.05rem;
         }
 
         input[type="tel"]:focus {
             outline: none;
-            border-color: var(--azul-claro);
-            box-shadow: 0 0 0 3px rgba(21, 101, 165, 0.2);
+            border-color: #153c6a;
+            box-shadow: 0 0 0 3px rgba(21, 60, 106, 0.2);
         }
 
-        .acoes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        button,
-        .botao-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 18px;
+        button {
+            padding: 14px 16px;
             border-radius: 12px;
+            background: #25d366;
+            color: #0f172a;
             font-size: 1.05rem;
             font-weight: 600;
             border: none;
             cursor: pointer;
-            transition: transform 0.2s ease;
-            text-decoration: none;
-        }
-
-        button {
-            background: var(--verde);
-            color: #0f172a;
         }
 
         button:disabled {
-            background: rgba(37, 211, 102, 0.4);
+            background: #a6e6c0;
             cursor: not-allowed;
         }
 
-        .botao-link {
-            background: var(--azul);
-            color: #fff;
-        }
-
-        button:hover:not(:disabled),
-        .botao-link:hover {
-            transform: translateY(-2px);
-        }
-
-        .aviso {
-            font-size: 0.95rem;
-            color: var(--cinza);
-            line-height: 1.6;
-        }
-
-        .mensagem-pronta {
-            background: rgba(15, 23, 42, 0.06);
+        .mensagem-area {
+            display: none;
+            background: #f0f3fa;
             border-radius: 12px;
             padding: 16px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 140px;
+            border: 1px solid #d4d9e5;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 1rem;
+            line-height: 1.5;
+            resize: none;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #153c6a;
+            box-shadow: 0 0 0 2px rgba(21, 60, 106, 0.15);
+        }
+
+        .regras {
             font-size: 0.95rem;
             line-height: 1.6;
-            display: none;
-            white-space: pre-line;
+            background: #eef2fa;
+            border-radius: 14px;
+            padding: 16px 18px;
+        }
+
+        .regras ul {
+            margin: 10px 0 0;
+            padding-left: 20px;
         }
 
         footer {
             text-align: center;
             padding: 32px 20px 40px;
-            color: var(--cinza);
+            color: #5a6475;
             font-size: 0.9rem;
         }
 
-        @media (max-width: 640px) {
-            .passo {
-                flex-direction: column;
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 16px 32px;
             }
 
-            .passo-numero {
-                width: 32px;
-                height: 32px;
+            .cartao {
+                border-radius: 16px;
             }
         }
     </style>
@@ -227,59 +180,42 @@
 <body>
     <header>
         <img src="/logocelso.png" alt="Celso Motorista" />
-        <h1>Indique um amigo e ganhe uma corrida em Iguatu</h1>
-        <p>Funciona assim: o novo passageiro informa o seu número de WhatsApp e ganha a primeira corrida. Depois o Celso agenda a sua corrida gratuita.</p>
+        <h1>Indique um amigo e ganhe uma corrida</h1>
+        <p>Promoção válida em Iguatu para quem nunca viajou com o Celso Motorista.</p>
     </header>
 
     <main>
-        <section class="card" aria-labelledby="passos">
-            <div class="passo-a-passo" id="passos">
-                <div class="passo">
-                    <span class="passo-numero">1</span>
-                    <div>
-                        <strong>Você compartilha o contato do Celso</strong>
-                        <p>Mostre para amigos ou clientes que ainda não viajaram com ele. O atendimento é sempre pelo WhatsApp oficial.</p>
-                    </div>
-                </div>
-                <div class="passo">
-                    <span class="passo-numero">2</span>
-                    <div>
-                        <strong>O amigo fala o seu número</strong>
-                        <p>No primeiro contato, ele diz que foi indicado por você e informa o seu WhatsApp. Só vale para novos passageiros.</p>
-                    </div>
-                </div>
-                <div class="passo">
-                    <span class="passo-numero">3</span>
-                    <div>
-                        <strong>Você ganha a corrida gratuita</strong>
-                        <p>Assim que a primeira corrida do amigo terminar, o Celso confere os dados e combina a sua viagem grátis dentro de Iguatu.</p>
-                    </div>
-                </div>
+        <section class="cartao">
+            <div class="passos">
+                <h2>Como funciona</h2>
+                <ol>
+                    <li><strong>Você compartilha esta página.</strong> Mostre para um amigo que ainda não chamou o Celso pelo WhatsApp.</li>
+                    <li><strong>Seu amigo chama o Celso.</strong> No primeiro contato, ele fala o próprio nome e diz que foi indicado por você.</li>
+                    <li><strong>Você recebe sua corrida grátis.</strong> Assim que a primeira corrida do amigo terminar, o Celso confirma os dados e combina sua corrida gratuita em Iguatu.</li>
+                </ol>
             </div>
 
-            <div class="destaque">
-                <h2>Preencha com o SEU WhatsApp</h2>
-                <p style="margin-bottom: 12px;">O número precisa ter DDD. Vamos usar esse dado na mensagem automática para o seu amigo.</p>
-                <div class="formulario">
-                    <label for="numero-indicador">Seu número com DDD (apenas números)</label>
-                    <input id="numero-indicador" type="tel" inputmode="numeric" placeholder="Ex.: 88991234567" autocomplete="tel" aria-describedby="ajuda-numero" />
-                    <span id="ajuda-numero" class="aviso">Use somente números, sem espaços. Exemplo: 88991234567.</span>
-                    <div class="acoes">
-                        <button id="botao-whatsapp" disabled><i class="fab fa-whatsapp"></i> Enviar convite agora</button>
-                        <a id="botao-copiar" class="botao-link" href="#"><i class="fas fa-copy"></i> Copiar mensagem pronta</a>
-                    </div>
-                    <div id="mensagem-pronta" class="mensagem-pronta"></div>
-                    <span id="feedback" class="aviso" style="display:none; color: var(--azul-claro); font-weight: 600;">Mensagem copiada! É só colar no WhatsApp.</span>
-                </div>
+            <div class="formulario">
+                <h2>Digite o SEU WhatsApp</h2>
+                <label for="numero-indicador">Número com DDD (somente números)</label>
+                <input id="numero-indicador" type="tel" inputmode="numeric" placeholder="Ex.: 88991234567" autocomplete="tel" aria-describedby="ajuda-numero" />
+                <span id="ajuda-numero" style="font-size: 0.95rem; color: #5a6475;">Sem espaços, sem traços. Exemplo: 88991234567.</span>
+                <button id="botao-whatsapp" disabled>Abrir mensagem no WhatsApp</button>
             </div>
 
-            <div class="aviso">
-                <strong>Importante lembrar:</strong>
-                <ul style="margin-top: 10px; margin-left: 20px; list-style: disc;">
-                    <li>A promoção vale somente para quem nunca fez corrida com o Celso Motorista pelo WhatsApp.</li>
-                    <li>O novo cliente precisa informar o seu número no primeiro contato para liberar o bônus.</li>
-                    <li>A sua corrida gratuita é válida em Iguatu. O Celso também faz viagens para outras cidades e estados com valores combinados pelo WhatsApp.</li>
-                    <li>Promoção sujeita à agenda disponível. Pode ser encerrada sem aviso prévio.</li>
+            <div class="mensagem-area" id="mensagem-area">
+                <p style="margin-top: 0; margin-bottom: 8px; font-weight: 600;">Mensagem pronta para você enviar:</p>
+                <textarea id="mensagem-pronta" readonly></textarea>
+                <p style="margin: 10px 0 0; font-size: 0.9rem; color: #5a6475;">Copie e cole se preferir. O botão acima também abre o WhatsApp já com a mensagem.</p>
+            </div>
+
+            <div class="regras">
+                <strong>Regras rápidas:</strong>
+                <ul>
+                    <li>Somente para novos clientes que avisarem que você indicou.</li>
+                    <li>A sua corrida gratuita é dentro de Iguatu.</li>
+                    <li>O Celso faz viagens para outras cidades e até para outros estados combinando o valor pelo WhatsApp.</li>
+                    <li>Promoção pode acabar a qualquer momento conforme a agenda.</li>
                 </ul>
             </div>
         </section>
@@ -292,9 +228,8 @@
     <script>
         const numeroInput = document.getElementById('numero-indicador');
         const botaoWhatsapp = document.getElementById('botao-whatsapp');
-        const botaoCopiar = document.getElementById('botao-copiar');
+        const mensagemArea = document.getElementById('mensagem-area');
         const mensagemPronta = document.getElementById('mensagem-pronta');
-        const feedback = document.getElementById('feedback');
 
         function limparNumero(valor) {
             return valor.replace(/\D/g, '');
@@ -302,10 +237,6 @@
 
         function numeroValido(valor) {
             return /^\d{10,13}$/.test(valor);
-        }
-
-        function gerarMensagem(numeroLimpo) {
-            return `Oi! O Celso Motorista cuida das minhas corridas em Iguatu.\n\nEstou te indicando agora e meu número é (${formatarNumero(numeroLimpo)}). Fala pra ele que foi indicado por mim pra garantir a sua primeira corrida gratuita!\n\nAtendimento no WhatsApp: https://wa.me/5588999301811\n\nEle também faz viagens para outras cidades e até para outros estados.`;
         }
 
         function formatarNumero(numero) {
@@ -318,58 +249,33 @@
             return numero;
         }
 
-        function atualizarEstado() {
+        function gerarMensagem(numeroLimpo) {
+            return `Oi! O Celso Motorista cuida das minhas corridas em Iguatu.\n\nMeu número é (${formatarNumero(numeroLimpo)}). Estou te indicando agora: fala pra ele que foi indicado por mim pra ganhar a primeira corrida gratuita.\n\nChama o Celso aqui: https://wa.me/5588999301811\n\nEle também leva para outras cidades e até outros estados.`;
+        }
+
+        function atualizarMensagem() {
             const numeroLimpo = limparNumero(numeroInput.value);
             const valido = numeroValido(numeroLimpo);
 
             botaoWhatsapp.disabled = !valido;
-            mensagemPronta.style.display = valido ? 'block' : 'none';
-            feedback.style.display = 'none';
 
             if (valido) {
                 const mensagem = gerarMensagem(numeroLimpo);
-                mensagemPronta.textContent = mensagem;
-                botaoWhatsapp.dataset.link = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
-                botaoCopiar.dataset.mensagem = mensagem;
+                mensagemPronta.value = mensagem;
+                mensagemArea.style.display = 'block';
+                botaoWhatsapp.dataset.url = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
             } else {
-                mensagemPronta.textContent = '';
-                delete botaoWhatsapp.dataset.link;
-                delete botaoCopiar.dataset.mensagem;
+                mensagemPronta.value = '';
+                mensagemArea.style.display = 'none';
+                delete botaoWhatsapp.dataset.url;
             }
         }
 
-        numeroInput.addEventListener('input', atualizarEstado);
+        numeroInput.addEventListener('input', atualizarMensagem);
 
         botaoWhatsapp.addEventListener('click', () => {
-            if (!botaoWhatsapp.dataset.link) return;
-            window.open(botaoWhatsapp.dataset.link, '_blank');
-        });
-
-        botaoCopiar.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (!botaoCopiar.dataset.mensagem) return;
-            const mensagem = botaoCopiar.dataset.mensagem;
-
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(mensagem).then(() => {
-                    feedback.style.display = 'inline';
-                });
-            } else {
-                const textarea = document.createElement('textarea');
-                textarea.value = mensagem;
-                textarea.style.position = 'fixed';
-                textarea.style.opacity = '0';
-                document.body.appendChild(textarea);
-                textarea.focus();
-                textarea.select();
-                try {
-                    document.execCommand('copy');
-                    feedback.style.display = 'inline';
-                } catch (err) {
-                    alert('Não foi possível copiar automaticamente. Copie manualmente:\n\n' + mensagem);
-                }
-                document.body.removeChild(textarea);
-            }
+            if (!botaoWhatsapp.dataset.url) return;
+            window.open(botaoWhatsapp.dataset.url, '_blank');
         });
 
         document.getElementById('ano').textContent = new Date().getFullYear();
