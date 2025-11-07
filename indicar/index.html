@@ -220,7 +220,7 @@
                 <ol>
                     <li><strong>Você compartilha esta página.</strong> Mostre para um amigo que ainda não chamou o Celso pelo WhatsApp.</li>
                     <li><strong>Seu amigo chama o Celso.</strong> No primeiro contato, ele fala o próprio nome e diz que foi indicado por você, para registrar a sua corrida gratuita.</li>
-                    <li><strong>Você recebe sua corrida grátis.</strong> Assim que a primeira corrida do amigo terminar, o Celso confirma os dados e combina sua corrida gratuita em Iguatu. O amigo paga a corrida dele normalmente.</li>
+                    <li><strong>Você recebe sua corrida grátis.</strong> Assim que a primeira corrida do amigo terminar, o Celso confirma os dados e combina sua corrida gratuita em Iguatu. O amigo paga a corrida dele normalmente e você não pode estar junto nessa corrida.</li>
                 </ol>
             </div>
 
@@ -249,6 +249,7 @@
                 <ul>
                     <li>Somente para novos clientes que avisarem que você indicou.</li>
                     <li>A corrida gratuita é somente para quem indicou; o amigo paga a corrida normalmente.</li>
+                    <li>Não vale se você estiver dentro da corrida do amigo: a sua corrida gratuita é marcada em outro momento.</li>
                     <li>A sua corrida gratuita é dentro de Iguatu.</li>
                     <li>O Celso faz viagens para outras cidades e até para outros estados combinando o valor pelo WhatsApp.</li>
                     <li>Promoção pode acabar a qualquer momento conforme a agenda.</li>
@@ -290,7 +291,7 @@
         }
 
         function gerarMensagem(numeroLimpo, linkIndicacao) {
-            return `Oi! O Celso Motorista cuida das minhas corridas em Iguatu.\n\nMeu número é (${formatarNumero(numeroLimpo)}). Estou te indicando agora: abra este link e fale com ele avisando que fui eu que indiquei para ele registrar minha corrida gratuita.\n\n${linkIndicacao}\n\nA sua corrida é combinada e paga normalmente com o Celso. Ele também leva para outras cidades e até outros estados.`;
+            return `Oi! O Celso Motorista cuida das minhas corridas em Iguatu.\n\nMeu número é (${formatarNumero(numeroLimpo)}). Estou te indicando agora: abra este link e fale com ele avisando que fui eu que indiquei para ele registrar minha corrida gratuita.\n\n${linkIndicacao}\n\nA sua corrida é combinada e paga normalmente com o Celso. Se eu for junto, a promoção não vale. Ele também leva para outras cidades e até outros estados.`;
         }
 
         function atualizarMensagem() {
@@ -391,7 +392,7 @@
 
             if (!numeroValido(numeroReferencia)) return;
 
-            const mensagemRef = `Olá Celso! Sou novo cliente e fui indicado pelo número (${formatarNumero(numeroReferencia)}). Pode registrar essa indicação para ele ganhar a corrida gratuita e combinar a minha corrida?`;
+            const mensagemRef = `Olá Celso! Sou novo cliente e fui indicado pelo número (${formatarNumero(numeroReferencia)}). Pode registrar essa indicação para ele ganhar a corrida gratuita e combinar a minha corrida? O indicador não estará na mesma corrida que eu.`;
             const urlWhatsapp = `https://wa.me/${CELSO_WHATSAPP}?text=${encodeURIComponent(mensagemRef)}`;
 
             setTimeout(() => {
