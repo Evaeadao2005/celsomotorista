@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indicação Celso Motorista</title>
+    <meta name="description" content="Indique um amigo para o Celso Motorista e ganhe uma corrida gratuita em Iguatu. Promoção válida para novos clientes." />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            background: #f4f6fb;
+            color: #162037;
+        }
+
+        header {
+            background: #153c6a;
+            color: #fff;
+            text-align: center;
+            padding: 48px 20px 40px;
+        }
+
+        header img {
+            width: 110px;
+            height: auto;
+            margin-bottom: 16px;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 6vw, 2.6rem);
+            margin: 0 0 12px;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 0;
+            font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+            line-height: 1.5;
+        }
+
+        main {
+            max-width: 760px;
+            margin: -32px auto 48px;
+            padding: 0 20px;
+        }
+
+        .cartao {
+            background: #fff;
+            border-radius: 20px;
+            padding: clamp(24px, 5vw, 36px);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+            display: grid;
+            gap: 28px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin: 0 0 12px;
+        }
+
+        ol {
+            margin: 0;
+            padding-left: 20px;
+            display: grid;
+            gap: 12px;
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        .passos strong {
+            display: block;
+        }
+
+        .formulario {
+            display: grid;
+            gap: 12px;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input[type="tel"] {
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 2px solid #d4d9e5;
+            font-size: 1.05rem;
+        }
+
+        input[type="tel"]:focus {
+            outline: none;
+            border-color: #153c6a;
+            box-shadow: 0 0 0 3px rgba(21, 60, 106, 0.2);
+        }
+
+        button {
+            padding: 14px 16px;
+            border-radius: 12px;
+            background: #25d366;
+            color: #0f172a;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background: #a6e6c0;
+            cursor: not-allowed;
+        }
+
+        .mensagem-area {
+            display: none;
+            background: #f0f3fa;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .link-area {
+            display: none;
+            background: #f0f3fa;
+            border-radius: 12px;
+            padding: 16px;
+            gap: 12px;
+        }
+
+        .link-area input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d4d9e5;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: #fff;
+        }
+
+        .link-area input[type="text"]:focus {
+            outline: none;
+            border-color: #153c6a;
+            box-shadow: 0 0 0 2px rgba(21, 60, 106, 0.15);
+        }
+
+        .botao-copiar {
+            background: #153c6a;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 140px;
+            border: 1px solid #d4d9e5;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 1rem;
+            line-height: 1.5;
+            resize: none;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #153c6a;
+            box-shadow: 0 0 0 2px rgba(21, 60, 106, 0.15);
+        }
+
+        .regras {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            background: #eef2fa;
+            border-radius: 14px;
+            padding: 16px 18px;
+        }
+
+        .regras ul {
+            margin: 10px 0 0;
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 20px 40px;
+            color: #5a6475;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 16px 32px;
+            }
+
+            .cartao {
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/logocelso.png" alt="Celso Motorista" />
+        <h1>Indique um amigo e ganhe uma corrida</h1>
+        <p>Promoção válida em Iguatu para quem nunca viajou com o Celso Motorista.</p>
+    </header>
+
+    <main>
+        <section class="cartao">
+            <div class="passos">
+                <h2>Como funciona</h2>
+                <ol>
+                    <li><strong>Você compartilha esta página.</strong> Mostre para um amigo que ainda não chamou o Celso pelo WhatsApp.</li>
+                    <li><strong>Seu amigo chama o Celso.</strong> No primeiro contato, ele fala o próprio nome e diz que foi indicado por você para o Celso anotar direitinho.</li>
+                    <li><strong>Você recebe sua corrida grátis.</strong> Assim que a primeira corrida do amigo terminar, o Celso confirma os dados e combina sua corrida gratuita em Iguatu. O amigo paga a corrida dele normalmente e você não pode estar junto nessa corrida.</li>
+                </ol>
+            </div>
+
+            <div class="formulario">
+                <h2>Digite o SEU WhatsApp</h2>
+                <label for="numero-indicador">Número com DDD (somente números)</label>
+                <input id="numero-indicador" type="tel" inputmode="numeric" placeholder="Ex.: 88991234567" autocomplete="tel" aria-describedby="ajuda-numero" />
+                <span id="ajuda-numero" style="font-size: 0.95rem; color: #5a6475;">Sem espaços, sem traços. Exemplo: 88991234567.</span>
+                <button id="botao-whatsapp" disabled>Copiar convite para WhatsApp</button>
+                <div class="link-area" id="link-area">
+                    <p style="margin: 0; font-weight: 600;">Este é o link que você envia para o seu amigo:</p>
+                    <input id="link-indicacao" type="text" readonly />
+                    <button type="button" class="botao-copiar" id="botao-copiar">Copiar link</button>
+                    <p style="margin: 0; font-size: 0.9rem; color: #5a6475;">Quando o amigo abrir esse link, ele já fala com o Celso avisando que você indicou.</p>
+                </div>
+            </div>
+
+            <div class="mensagem-area" id="mensagem-area">
+                <p style="margin-top: 0; margin-bottom: 8px; font-weight: 600;">Mensagem pronta para você enviar:</p>
+                <textarea id="mensagem-pronta" readonly></textarea>
+                <p style="margin: 10px 0 0; font-size: 0.9rem; color: #5a6475;">Use o botão acima para copiar e depois cole a mensagem na conversa com o seu amigo.</p>
+            </div>
+
+            <div class="regras">
+                <strong>Regras rápidas:</strong>
+                <ul>
+                    <li>Somente para novos clientes que avisarem que você indicou.</li>
+                    <li>A corrida gratuita é somente para quem indicou; o amigo paga a corrida normalmente.</li>
+                    <li>Não vale se você estiver dentro da corrida do amigo: a sua corrida gratuita é marcada em outro momento.</li>
+                    <li>A sua corrida gratuita é dentro de Iguatu.</li>
+                    <li>O Celso faz viagens para outras cidades e até para outros estados combinando o valor pelo WhatsApp.</li>
+                    <li>Promoção pode acabar a qualquer momento conforme a agenda.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="ano"></span> Celso Motorista • Transporte particular em Iguatu, CE
+    </footer>
+
+    <script>
+        const CELSO_WHATSAPP = '5588999301811';
+        const numeroInput = document.getElementById('numero-indicador');
+        const botaoWhatsapp = document.getElementById('botao-whatsapp');
+        const mensagemArea = document.getElementById('mensagem-area');
+        const mensagemPronta = document.getElementById('mensagem-pronta');
+        const linkArea = document.getElementById('link-area');
+        const linkIndicacaoInput = document.getElementById('link-indicacao');
+        const botaoCopiar = document.getElementById('botao-copiar');
+
+        function limparNumero(valor) {
+            return valor.replace(/\D/g, '');
+        }
+
+        function numeroValido(valor) {
+            return /^\d{10,13}$/.test(valor);
+        }
+
+        function formatarNumero(numero) {
+            if (numero.length === 10) {
+                return `${numero.slice(0, 2)} ${numero.slice(2, 6)}-${numero.slice(6)}`;
+            }
+            if (numero.length === 11) {
+                return `${numero.slice(0, 2)} ${numero.slice(2, 7)}-${numero.slice(7)}`;
+            }
+            return numero;
+        }
+
+        function gerarMensagem(numeroLimpo, linkIndicacao) {
+            return `Oi! O Celso Motorista cuida das minhas corridas em Iguatu.\n\nMeu número é (${formatarNumero(numeroLimpo)}). Abre este link e fala com ele avisando que fui eu que indiquei.\n\n${linkIndicacao}\n\nA sua corrida é combinada e paga normalmente direto com o Celso. Eu não vou junto nessa corrida. Ele também leva para outras cidades e até outros estados.`;
+        }
+
+        function atualizarMensagem() {
+            const numeroLimpo = limparNumero(numeroInput.value);
+            const valido = numeroValido(numeroLimpo);
+
+            botaoWhatsapp.disabled = !valido;
+
+            if (valido) {
+                const linkIndicacao = `${window.location.origin}${window.location.pathname}?ref=${numeroLimpo}`;
+                const mensagem = gerarMensagem(numeroLimpo, linkIndicacao);
+                mensagemPronta.value = mensagem;
+                mensagemArea.style.display = 'block';
+                botaoWhatsapp.dataset.mensagem = mensagem;
+                linkIndicacaoInput.value = linkIndicacao;
+                linkArea.style.display = 'grid';
+            } else {
+                mensagemPronta.value = '';
+                mensagemArea.style.display = 'none';
+                delete botaoWhatsapp.dataset.mensagem;
+                linkIndicacaoInput.value = '';
+                linkArea.style.display = 'none';
+            }
+        }
+
+        numeroInput.addEventListener('input', atualizarMensagem);
+
+        botaoWhatsapp.addEventListener('click', () => {
+            const mensagem = botaoWhatsapp.dataset.mensagem;
+            if (!mensagem) return;
+
+            const copiar = () => {
+                alert('Mensagem copiada! Agora cole no WhatsApp do seu amigo.');
+            };
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(mensagem).then(copiar).catch(() => {
+                    fallbackCopiarTexto(mensagem, copiar);
+                });
+            } else {
+                fallbackCopiarTexto(mensagem, copiar);
+            }
+        });
+
+        botaoCopiar.addEventListener('click', () => {
+            const link = linkIndicacaoInput.value;
+            if (!link) return;
+
+            const copia = () => {
+                alert('Link copiado! Agora é só enviar para o seu amigo.');
+            };
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(link).then(copia).catch(() => {
+                    fallbackCopiar(link);
+                });
+            } else {
+                fallbackCopiar(link);
+            }
+        });
+
+        function fallbackCopiar(texto) {
+            const area = document.createElement('textarea');
+            area.value = texto;
+            area.style.position = 'fixed';
+            area.style.top = '-1000px';
+            document.body.appendChild(area);
+            area.select();
+            document.execCommand('copy');
+            document.body.removeChild(area);
+            alert('Link copiado! Agora é só enviar para o seu amigo.');
+        }
+
+        function fallbackCopiarTexto(texto, callback) {
+            const area = document.createElement('textarea');
+            area.value = texto;
+            area.style.position = 'fixed';
+            area.style.top = '-1000px';
+            document.body.appendChild(area);
+            area.select();
+            const sucesso = document.execCommand('copy');
+            document.body.removeChild(area);
+
+            if (sucesso && typeof callback === 'function') {
+                callback();
+            } else {
+                alert('Copie a mensagem manualmente selecionando o texto acima.');
+            }
+        }
+
+        function direcionarSeIndicacao() {
+            const params = new URLSearchParams(window.location.search);
+            const referencia = params.get('ref');
+
+            if (!referencia) return;
+
+            const numeroReferencia = limparNumero(referencia);
+
+            if (!numeroValido(numeroReferencia)) return;
+
+            const mensagemRef = `Olá Celso! Sou novo cliente e fui indicado pelo número (${formatarNumero(numeroReferencia)}). Pode registrar essa indicação para ele ganhar a corrida gratuita e combinar a minha corrida? O indicador não estará na mesma corrida que eu.`;
+            const urlWhatsapp = `https://wa.me/${CELSO_WHATSAPP}?text=${encodeURIComponent(mensagemRef)}`;
+
+            setTimeout(() => {
+                window.location.replace(urlWhatsapp);
+            }, 400);
+        }
+
+        document.getElementById('ano').textContent = new Date().getFullYear();
+        direcionarSeIndicacao();
+    </script>
+</body>
+</html>
